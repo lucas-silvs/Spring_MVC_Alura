@@ -1,10 +1,17 @@
 package br.com.alura.mvc.mudi.dto;
 
 import br.com.alura.mvc.mudi.model.Pedido;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import javax.validation.constraints.NotBlank;
+
 
 public class RequisicaoNovoPedido {
+    @NotBlank
     private String nomeProduto;
+    @NotBlank
     private String urlProduto;
+    @NotBlank
     private String urlImagemProduto;
     private String descricaoProduto;
 
