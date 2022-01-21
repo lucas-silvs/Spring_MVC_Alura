@@ -1,4 +1,4 @@
-package br.com.alura.mvc.demo.model;
+package br.com.alura.mvc.mudi.model;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
