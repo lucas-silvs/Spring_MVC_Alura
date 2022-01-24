@@ -2,6 +2,7 @@ package br.com.alura.mvc.mudi.controller;
 
 import br.com.alura.mvc.mudi.dto.RequisicaoNovoPedido;
 import br.com.alura.mvc.mudi.model.Pedido;
+import br.com.alura.mvc.mudi.model.StatusPedido;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -31,9 +32,10 @@ public class PedidoController {
             return "pedido/formulario";
         }
         Pedido pedido = requisicao.toPedido();
+        pedido.setStatus(StatusPedido.AGUARDANDO);
         repository.save(pedido);
 
-        return "pedido/formulario";
+        return "redirect:/home";
 
     }
 
